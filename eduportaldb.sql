@@ -1,0 +1,12 @@
+create database EduportalDB;
+use EduportalDB;
+create table course(courseid int primary key,coursename char(100) not null,category char(50),fee float(7,2) check(fee>0),durationweeks int check(durationweeks>0));
+desc course;
+create table Students(StudentId int primary key,FirstName char(50) not null,LastName char(50),Email char(100) unique,EnrollmentDate date);
+desc Students;
+alter table course add column levels char(20);
+desc course;
+alter table Students modify column Email char(255);
+desc Students;
+alter table course drop column category;
+desc course;
