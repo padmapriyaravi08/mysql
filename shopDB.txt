@@ -1,0 +1,10 @@
+create database shopDB;
+use shopDB;
+create table Products(productid int,productname char(100),category char(50),price float(6,2),stockquantity int);
+desc Products;
+create table customers(customerid int,firstname char(50),lastname char(50),email char(100));
+alter table Products add column description char(255);
+desc Products;
+alter table customers modify column email char(255);
+alter table Products drop column category;
+desc Products;
